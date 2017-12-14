@@ -20,6 +20,8 @@ Each phase has a `FIFO` queue of callbacks to execute. While each phase is speci
 
 Since any of these operations may schedule more operations and new events processed in the poll phase are queued by the kernel, poll events can be queued while polling events are being processed. As a result, long running callbacks can allow the poll phase to run much longer than a timer's threshold.
 
+## Checkout [process](https://github.com/dusty-learning/node-event-loop/blob/master/process.md) and [setTimeout vs setImmediate](https://github.com/dusty-learning/node-event-loop/blob/master/timeout-vs-immediate.md) before continuing
+
 ## Phases Overview
 
 - `timers`: This phase executes callbacks scheduled by `setTimeout()` and `setInterval()`
